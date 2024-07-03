@@ -1,0 +1,148 @@
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.table-container {
+    margin-top: 20px;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table-container th,
+.table-container td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-container th {
+    background-color: #f2f2f2;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    margin: 0 5px;
+}
+
+.card, .report-card {
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-header, .report-card-header {
+    padding: 15px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-body, .report-card-body {
+    padding: 15px;
+    display: none;
+}
+
+.card-body.expanded, .report-card-body.expanded {
+    display: block;
+}
+
+.actions button {
+    margin-right: 10px;
+}
+
+.error-message {
+    color: red;
+}
+
+.report-link, .photo-link {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Modal styles */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
