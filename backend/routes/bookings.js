@@ -9,7 +9,7 @@ const app = express();
 const path = require('path');
 const crypto = require('crypto');
 // const uploadsPath = path.join(__dirname, 'uploads');
-app.use('/uploads', express.static(path.join(__dirname, 'routes/uploads')));
+//app.use('/uploads', express.static(path.join(__dirname, 'routes/uploads')));
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -488,6 +488,16 @@ router.get('/fetch-report-files', (req, res) => {
             return res.status(500).send(err);
         }
         res.json(results);
+    });
+});
+router.get('/download/:filename', (req, res) => {
+    const filename = req.params.filename;
+    const filePath = path.join(__dirname, 'uploads', filename);
+    res.download(filePath, filename, (err) => {
+        if (err) {
+            console.error('Error downloading file:', err);
+            res.status(500).send('Error downloading file');
+        }
     });
 });
 

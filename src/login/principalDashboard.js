@@ -31,7 +31,7 @@ const PrincipalDashboard = () => {
 
     const handleLogout = () => {
         logout();
-        navigate('/login');
+        navigate('/');
     };
 
     const formatAsIST = (utcDateTime) => {
@@ -176,13 +176,13 @@ const PrincipalDashboard = () => {
                                     <div>
                                         <strong>Reports:</strong>
                                         {files.reportFiles.map((file, index) => (
-                                            <a key={index} className="report-link" href={`/${file}`} download>Download Report {index + 1}</a>
+                                            <a key={index} className="report-link" href={`http://localhost:5000/api/download/${file.split('/').pop()}`} download>Download Report {index + 1}</a>
                                         ))}
                                     </div>
                                     <div>
                                         <strong>Photos:</strong>
                                         {files.photoFiles.map((file, index) => (
-                                            <a key={index} className="photo-link" href={`/${file}`} download>Download Photo {index + 1}</a>
+                                            <a key={index} className="photo-link" href={`http://localhost:5000/api/download/${file.split('/').pop()}`} download>Download Photo {index + 1}</a>
                                         ))}
                                     </div>
                                 </div>

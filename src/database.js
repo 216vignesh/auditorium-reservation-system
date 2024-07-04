@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const connection = mysql.createConnection({
+const pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: '',
@@ -12,10 +12,20 @@ const connection = mysql.createConnection({
 //     database: 'u553527036_ebAdmin'
 // });
 
-
-connection.connect(error => {
-    if (error) throw error;
-    console.log("Successfully connected to the database.");
+pool.on('connection', (connection) => {
+  console.log('Database connection established');
 });
 
-module.exports = connection;
+pool.on('error', (err) => {
+  console.error('Database error:', err);
+  if (err.code === 'PROTOCOL_CONNECTION_LOST') {
+    console.error('Database connection was closed.');
+  } else if (err.code === 'ER_CON_COUNT_ERROR') {
+    console.error('Database has too many connections.');
+  } else if (err.code === 'ECONNREFUSED') {
+    console.error('Database connection was refused.');
+  }
+});
+
+
+module.exports = pool;

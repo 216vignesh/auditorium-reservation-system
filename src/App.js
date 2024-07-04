@@ -15,7 +15,7 @@ const App = () => {
     const auditoriums = [
         { value: 'auditorium1', label: 'Seminar Hall' },
         { value: 'auditorium2', label: 'Dilip Kumar Auditorium' },
-        { value: 'auditorium3', label: 'Seminar Hall 2' }
+        { value: 'auditorium3', label: 'College Auditorium' }
     ];
 
 

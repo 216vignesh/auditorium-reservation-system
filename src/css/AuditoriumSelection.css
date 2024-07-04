@@ -25,9 +25,10 @@
 }
 
 .header-button {
+    margin:30px;
     background-color: #007bff;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 30px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
