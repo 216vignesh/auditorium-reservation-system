@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Auditorium Reservation System for Guru Nanak Khalsa College, Mumbai, India
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a full stack application for reserving auditorium in Guru Nanak Khalsa College, Mumbai, India. This application was developed to ease the workload of administrative staff in manually reserving an auditorium. This application offers multiple interesting features like multi level approvals, verified email based booking, options to upload reports and photographs, creating admins, editing booking forms by admin. React.js is used for front end and Node.js for backend with MySQL database.
+The application is currently hosted on local server as per the requirement of the college.
 
-## Available Scripts
+To run this application on local machine, make sure you have Xampp server with Apache and MySQL. Clone this repository and start the Apache server.
+Go to localhost/phpmyadmin and create a new schema bookings.
+Under bookings schema, create 4 tables, bookings, form_configurations, report_files and users.
+The structure of each table is as shown below:
+bookings:
+![image](https://github.com/user-attachments/assets/8be8f8f5-ce92-44c9-beee-f1ab0090de8f)
 
-In the project directory, you can run:
+form_configurations
+![image](https://github.com/user-attachments/assets/ae395bf4-ebf1-4661-a96d-5753862a755b)
 
-### `npm start`
+report_files:
+![image](https://github.com/user-attachments/assets/94451b6b-5f37-4dcf-81c1-1b392b01055d)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+users:
+![image](https://github.com/user-attachments/assets/34287ae1-f228-4324-8bfc-fe899a8c5479)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Then go to root of the project and run "npm install" command
 
-### `npm test`
+Then go to backend folder and run "npm install"
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Now from root, run "npm start" and "nodemon server" from backend folder.
 
-### `npm run build`
+Below is the video of the application:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
